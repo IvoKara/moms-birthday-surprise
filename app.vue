@@ -23,13 +23,16 @@ body,
 }
 
 html {
-  /* background-color: #2971f6; */
-  background-color: theme('colors.primary');
-  color: white;
+  --uno: bg-[#2971f6] text-white font-sans;
+}
+
+h1,
+h2,
+h3 {
+  --uno: font-serif;
 }
 
 html.dark {
-  background: #222;
-  color: white;
+  --uno: bg-blue-8;
 }
 </style>
