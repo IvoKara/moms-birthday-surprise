@@ -7,7 +7,7 @@ useHead({
 </script>
 
 <template>
-  <VitePwaManifest />
+  <!-- <VitePwaManifest /> -->
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -20,6 +20,12 @@ body,
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+html {
+  /* background-color: #2971f6; */
+  background-color: theme('colors.primary');
+  color: white;
 }
 
 html.dark {
