@@ -1,5 +1,5 @@
 <template>
-  <footer opacity-85 text="sm">
+  <footer opacity-90 text="sm">
     <p>
       Направено с много
       <span aria-label="любов">

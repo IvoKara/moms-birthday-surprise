@@ -8,18 +8,22 @@ const props = withDefaults(defineProps<{
 })
 
 const buttonClass = computed(() => {
-  return cva('rounded-8', {
-    variants: {
-      intent: {
-        primary: 'bg-yellow text-black',
-        secondary: 'bg-blue-9 text-white',
-      },
-      size: {
-        normal: 'px-6 py-3 text-sm font-extrabold',
-        large: 'px-8 py-4 text-lg font-extrabold',
+  return cva(
+    'relative rounded-8 transition-300 ease-in-out '
+    + 'hover:(-translate-4px shadow-[4px_4px_0])',
+    {
+      variants: {
+        intent: {
+          primary: 'bg-yellow text-black hover:(shadow-[#f77f00])',
+          secondary: 'bg-blue-9 text-white hover:(shadow-blue)',
+        },
+        size: {
+          normal: 'px-6 py-3 text-sm font-extrabold',
+          large: 'px-8 py-4 text-lg font-extrabold',
+        },
       },
     },
-  })({
+  )({
     intent: props.intent,
     size: props.size,
   })
