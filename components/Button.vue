@@ -14,7 +14,7 @@ const buttonClass = computed(() => {
     {
       variants: {
         intent: {
-          primary: 'bg-yellow text-black hover:(shadow-[#f77f00])',
+          primary: 'bg-yellow text-black hover:(shadow-amber-6)',
           secondary: 'bg-blue-9 text-white hover:(shadow-blue)',
         },
         size: {

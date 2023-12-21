@@ -8,22 +8,23 @@
 
 <style>
 @keyframes up-down {
-  from,
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-
-  25% {
+  from {
     transform: translate3d(0, 10px, 0);
   }
 
-  75% {
+  to {
     transform: translate3d(0, -10px, 0);
   }
 }
 
+@keyframes down {
+  to {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
 .animate-up-down {
-  animation: up-down 6s ease-in-out infinite;
-  animation-fill-mode: both;
+  animation: down 1.5s ease-in-out both;
+  animation: up-down 6s ease-in-out 1.5s infinite alternate;
 }
 </style>
