@@ -18,7 +18,7 @@ const emit = defineEmits<{
       <NuxtImg
         src="/present.png" alt="Подарък"
         class="animate-up-down cursor-pointer"
-        preload loading="lazy"
+        preload
         @click="emit('click', $event)"
       />
     </template>
@@ -27,12 +27,12 @@ const emit = defineEmits<{
       <NuxtImg
         src="/present-head.png" alt="Капак на подарък"
         class="translate-y-14px animate-open-box"
-        preload loading="lazy"
+        preload
       />
       <NuxtImg
         src="/present-body.png" alt="Тяло на подарък"
         translate-y--13px
-        preload loading="lazy"
+        preload
       />
     </div>
   </div>
