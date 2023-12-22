@@ -17,7 +17,7 @@ useHead({
 html,
 body,
 #__nuxt {
-  height: 100dvh;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
 }
