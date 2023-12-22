@@ -6,6 +6,6 @@
       <slot />
     </div>
 
-    <Footer mt-10 />
+    <Footer mt-10 z--1 />
   </main>
 </template>
