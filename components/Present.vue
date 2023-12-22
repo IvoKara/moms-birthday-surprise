@@ -14,13 +14,13 @@ const emit = defineEmits<{
   <div isolate relative aspect-square max-w-90 w-full h-full p-5>
     <div absolute inset-0 z--1 rounded="50%" bg-amber blur-3xl />
 
-      <NuxtImg
+    <NuxtImg
       v-show="state === 'floating'"
-        src="/present.png" alt="Подарък"
-        class="animate-up-down cursor-pointer"
-        preload
-        @click="emit('click', $event)"
-      />
+      src="/present.png" alt="Подарък"
+      class="animate-up-down cursor-pointer"
+      preload
+      @click="emit('click', $event)"
+    />
 
     <div v-show="state === 'unboxing'" class="animate-shake">
       <NuxtImg
@@ -33,6 +33,29 @@ const emit = defineEmits<{
         translate-y--13px
         preload
       />
+      <div
+        role="dialog"
+        fixed inset-6 rounded-4 p-10
+        animate-zoom-in-down animate="duration-2s delay-3500 backwards"
+        bg="#D79C42" overflow-auto
+      >
+        <div>
+          <h1 text-5xl>
+            46!
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            In officiis atque aut? Quod harum quasi alias aperiam?
+            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            In officiis atque aut? Quod harum quasi alias aperiam?
+            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            In officiis atque aut? Quod harum quasi alias aperiam?
+            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
