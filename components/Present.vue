@@ -14,16 +14,15 @@ const emit = defineEmits<{
   <div isolate relative aspect-square max-w-90 w-full h-full p-5>
     <div absolute inset-0 z--1 rounded="50%" bg-amber blur-3xl />
 
-    <template v-if="state === 'floating'">
       <NuxtImg
+      v-show="state === 'floating'"
         src="/present.png" alt="Подарък"
         class="animate-up-down cursor-pointer"
         preload
         @click="emit('click', $event)"
       />
-    </template>
 
-    <div v-else class="animate-shake">
+    <div v-show="state === 'unboxing'" class="animate-shake">
       <NuxtImg
         src="/present-head.png" alt="Капак на подарък"
         class="translate-y-14px animate-open-box"
