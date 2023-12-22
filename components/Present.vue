@@ -24,8 +24,16 @@ const emit = defineEmits<{
     </template>
 
     <div v-else class="animate-shake">
-      <NuxtImg preload translate-y-14px src="/present-head.png" alt="Капак на подарък" loading="lazy" />
-      <NuxtImg preload translate-y--13px src="/present-body.png" alt="Тяло на подарък" loading="lazy" />
+      <NuxtImg
+        src="/present-head.png" alt="Капак на подарък"
+        class="translate-y-14px animate-open-box"
+        preload loading="lazy"
+      />
+      <NuxtImg
+        src="/present-body.png" alt="Тяло на подарък"
+        translate-y--13px
+        preload loading="lazy"
+      />
     </div>
   </div>
 </template>
@@ -56,12 +64,22 @@ const emit = defineEmits<{
   }
 }
 
+@keyframes open-box {
+  to {
+    transform: translate3d(0, -30px, 0);
+  }
+}
+
 .animate-up-down {
   animation: down 1.5s ease-in-out both;
   animation: up-down 6s ease-in-out 1.5s infinite alternate;
 }
 
 .animate-shake {
-  animation: shake 500ms ease-out 1s;
+  animation: shake 500ms ease-out 1.3s;
+}
+
+.animate-open-box {
+  animation: open-box 300ms ease-in-out 3s forwards;
 }
 </style>

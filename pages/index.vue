@@ -11,8 +11,25 @@ const state = ref<PresentBoxState>('floating')
       @click="state = 'unboxing'"
     />
 
-    <Button @click="state = 'unboxing'">
+    <Button
+      :class="{ 'animate-go-away': state === 'unboxing' }"
+      @click="state = 'unboxing'"
+    >
       Отвори ме!
     </Button>
   </div>
 </template>
+
+<style>
+@keyframes go-away {
+  to {
+    scale: 0;
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+
+.animate-go-away {
+  animation: go-away 1s ease-in-out forwards;
+}
+</style>
