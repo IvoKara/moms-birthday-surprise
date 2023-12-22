@@ -36,4 +36,5 @@ export default defineConfig({
       primary: '#2971F6',
     },
   },
+  safelist: ['text-center'],
 })
