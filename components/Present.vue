@@ -33,39 +33,7 @@ const emit = defineEmits<{
         translate-y--13px
         preload
       />
-      <div
-        role="dialog"
-        fixed z-10 inset-6 rounded-4 p-10
-        animate-zoom-in-down animate="duration-2s delay-3500 backwards"
-        bg="#D79C42" overflow-auto
-        after="absolute content-['cd'] top-0 bg-red"
-      >
-        <div>
-          <h1 text-5xl mb-4>
-            46!
-          </h1>
-          <p text-start>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            In officiis atque aut? Quod harum quasi alias aperiam?
-            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            In officiis atque aut? Quod harum quasi alias aperiam?
-            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            In officiis atque aut? Quod harum quasi alias aperiam?
-            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            In officiis atque aut? Quod harum quasi alias aperiam?
-            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            In officiis atque aut? Quod harum quasi alias aperiam?
-            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            In officiis atque aut? Quod harum quasi alias aperiam?
-            Expedita alias architecto accusantium debitis, cumque, ea est libero qui aliquid id necessitatibus!
-          </p>
-        </div>
-      </div>
+      <Dialog animate-zoom-in-down animate="duration-2s delay-3500 backwards" />
     </div>
   </div>
 </template>
